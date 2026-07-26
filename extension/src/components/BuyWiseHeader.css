@@ -1,0 +1,617 @@
+/* ==========================================================
+   BuyWise Header
+   Editorial Premium Design
+   Part 1
+========================================================== */
+
+.panel-header{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+    padding:22px 24px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FCF8F3 0%,
+            #F5EEE5 100%
+        );
+
+    border:1px solid rgba(15,23,42,.08);
+
+    box-shadow:
+        0 14px 34px rgba(15,23,42,.07);
+
+    overflow:hidden;
+
+}
+
+/* ========================================================== */
+
+.panel-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle at top right,
+
+            rgba(159,18,57,.08),
+
+            transparent 34%
+
+        ),
+
+        radial-gradient(
+
+            circle at bottom left,
+
+            rgba(15,23,42,.05),
+
+            transparent 42%
+
+        );
+
+    pointer-events:none;
+
+}
+
+/* ========================================================== */
+
+.panel-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-90px;
+
+    top:-90px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(159,18,57,.10),
+
+            transparent 72%
+
+        );
+
+    pointer-events:none;
+
+}
+
+/* ========================================================== */
+
+.header-left{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    flex:1;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ========================================================== */
+
+.brand-logo{
+
+    width:54px;
+
+    height:54px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+    border-radius:18px;
+
+    background:#F7F1E9;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    box-shadow:
+
+        0 8px 18px rgba(15,23,42,.05);
+
+    transition:
+
+        transform .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+.brand-logo:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        0 14px 26px rgba(15,23,42,.08);
+
+}
+
+/* ========================================================== */
+
+.brand-mark{
+
+    width:32px;
+
+    height:32px;
+
+}
+
+/* ========================================================== */
+
+.brand-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    gap:8px;
+
+    min-width:0;
+
+}
+
+/* ========================================================== */
+
+.eyebrow{
+
+    width:max-content;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:var(--wine);
+
+}
+
+/* ========================================================== */
+
+.name{
+
+    margin:0;
+
+    color:var(--navy);
+
+    font-size:32px;
+
+    font-weight:800;
+
+    line-height:1;
+
+    letter-spacing:-.05em;
+
+}
+
+/* ========================================================== */
+
+.tagline{
+
+    margin:0;
+
+    max-width:370px;
+
+    color:#4B5563;
+
+    font-size:15px;
+
+    line-height:1.65;
+
+    font-weight:500;
+
+}
+
+/* ========================================================== */
+
+.brand-text::after{
+
+    content:"";
+
+    width:74px;
+
+    height:3px;
+
+    margin-top:6px;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--wine),
+
+            var(--navy)
+
+        );
+
+}
+/* ==========================================================
+   Status Pills
+========================================================== */
+
+.status-row{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:8px;
+
+}
+
+/* ========================================================== */
+
+.status-pill{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#F9F5EF;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    color:var(--navy);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    transition:
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+
+    box-shadow:
+        0 4px 10px rgba(15,23,42,.03);
+
+}
+
+.status-pill:hover{
+
+    transform:translateY(-2px);
+
+    border-color:rgba(159,18,57,.15);
+
+    box-shadow:
+        0 10px 20px rgba(15,23,42,.05);
+
+}
+
+/* ========================================================== */
+
+.status-pill.live{
+
+    background:var(--wine);
+
+    color:#fff;
+
+    border-color:transparent;
+
+    box-shadow:
+        0 10px 22px rgba(159,18,57,.18);
+
+}
+
+/* ========================================================== */
+
+.live-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#34D399;
+
+    animation:pulse 2s infinite;
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================================
+   Settings Button
+========================================================== */
+
+.icon-btn{
+
+    position:relative;
+
+    z-index:2;
+
+    width:48px;
+
+    height:48px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:#F7F1E9;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    color:var(--navy);
+
+    box-shadow:
+        0 8px 18px rgba(15,23,42,.05);
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.icon-btn:hover{
+
+    transform:translateY(-2px);
+
+    background:var(--wine);
+
+    color:#fff;
+
+    box-shadow:
+        0 16px 30px rgba(159,18,57,.18);
+
+}
+
+.icon-btn svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+/* ==========================================================
+   Animations
+========================================================== */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.45);
+
+        opacity:.45;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:768px){
+
+    .panel-header{
+
+        padding:20px;
+
+        gap:18px;
+
+    }
+
+    .header-left{
+
+        gap:16px;
+
+    }
+
+    .name{
+
+        font-size:28px;
+
+    }
+
+    .tagline{
+
+        max-width:100%;
+
+        font-size:14px;
+
+    }
+
+    .status-row{
+
+        gap:8px;
+
+    }
+
+    .status-pill{
+
+        padding:8px 12px;
+
+        font-size:11px;
+
+    }
+
+}
+
+/* ========================================================== */
+
+@media (max-width:480px){
+
+    .panel-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:18px;
+
+        border-radius:24px;
+
+    }
+
+    .header-left{
+
+        width:100%;
+
+    }
+
+    .brand-logo{
+
+        width:50px;
+
+        height:50px;
+
+        border-radius:16px;
+
+    }
+
+    .brand-mark{
+
+        width:30px;
+
+        height:30px;
+
+    }
+
+    .name{
+
+        font-size:26px;
+
+    }
+
+    .tagline{
+
+        font-size:13px;
+
+        line-height:1.6;
+
+    }
+
+    .icon-btn{
+
+        align-self:flex-end;
+
+        width:44px;
+
+        height:44px;
+
+        border-radius:14px;
+
+        margin-top:-4px;
+
+    }
+
+}
+
+/* ==========================================================
+   Editorial Finishing Touches
+========================================================== */
+
+.panel-header:hover{
+
+    box-shadow:
+        0 18px 42px rgba(15,23,42,.09);
+
+}
+
+.brand-text{
+
+    position:relative;
+
+}
+
+.name{
+
+    text-wrap:balance;
+
+}
+
+.tagline{
+
+    text-wrap:pretty;
+
+}

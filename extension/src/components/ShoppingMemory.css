@@ -1,0 +1,804 @@
+/* ==========================================================
+   BuyWise Memory
+   Part 1
+========================================================== */
+
+.shopping-memory{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+/* ========================================================== */
+
+.memory-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+}
+
+/* ========================================================== */
+
+.memory-kicker{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:var(--wine);
+
+}
+
+/* ========================================================== */
+
+.memory-title{
+
+    margin:0;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    letter-spacing:-.03em;
+
+    color:var(--navy);
+
+}
+
+/* ========================================================== */
+
+.memory-subtitle{
+
+    margin-top:10px;
+
+    color:var(--text-lo);
+
+    font-size:15px;
+
+    line-height:1.75;
+
+}
+
+/* ========================================================== */
+
+.memory-overview{
+
+    display:flex;
+
+    gap:14px;
+
+}
+
+/* ========================================================== */
+
+.memory-stat{
+
+    min-width:96px;
+
+    padding:16px;
+
+    border-radius:20px;
+
+    background:#FFFFFF;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    box-shadow:
+
+        0 10px 22px rgba(15,23,42,.05);
+
+    text-align:center;
+
+}
+
+/* ========================================================== */
+
+.memory-stat strong{
+
+    display:block;
+
+    color:var(--navy);
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+/* ========================================================== */
+
+.memory-stat span{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:var(--text-faint);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================================
+   Search
+========================================================== */
+
+.memory-search{
+
+    width:100%;
+
+}
+
+/* ========================================================== */
+
+.memory-search-input{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    background:#FFFFFF;
+
+    color:var(--navy);
+
+    font-size:15px;
+
+    transition:
+
+        border-color .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+/* ========================================================== */
+
+.memory-search-input::placeholder{
+
+    color:var(--text-faint);
+
+}
+
+/* ========================================================== */
+
+.memory-search-input:focus{
+
+    outline:none;
+
+    border-color:var(--wine);
+
+    box-shadow:
+
+        0 0 0 4px rgba(159,18,57,.08);
+
+}
+/* ==========================================================
+   Saved Products
+   Part 2
+========================================================== */
+
+.memory-products{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* ========================================================== */
+
+.memory-products-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ========================================================== */
+
+.memory-products-header h3{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:800;
+
+    letter-spacing:-.02em;
+
+    color:var(--navy);
+
+}
+
+/* ========================================================== */
+
+.memory-count{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:42px;
+
+    height:42px;
+
+    padding:0 14px;
+
+    border-radius:999px;
+
+    background:#F4ECE3;
+
+    color:var(--wine);
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+/* ========================================================== */
+
+.memory-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* ========================================================== */
+
+.memory-card{
+
+    display:flex;
+
+    gap:20px;
+
+    padding:20px;
+
+    background:#FFFFFF;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    border-radius:24px;
+
+    box-shadow:
+
+        0 12px 28px rgba(15,23,42,.05);
+
+    transition:
+
+        transform .25s ease,
+
+        box-shadow .25s ease,
+
+        border-color .25s ease;
+
+}
+
+/* ========================================================== */
+
+.memory-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:rgba(159,18,57,.16);
+
+    box-shadow:
+
+        0 20px 40px rgba(15,23,42,.08);
+
+}
+
+/* ========================================================== */
+
+.memory-image{
+
+    width:110px;
+
+    height:110px;
+
+    flex-shrink:0;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:#F7F2EB;
+
+    border:1px solid rgba(15,23,42,.06);
+
+    cursor:pointer;
+
+}
+
+/* ========================================================== */
+
+.memory-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    padding:10px;
+
+    transition:transform .25s ease;
+
+}
+
+/* ========================================================== */
+
+.memory-card:hover .memory-image img{
+
+    transform:scale(1.04);
+
+}
+
+/* ========================================================== */
+
+.memory-image-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:var(--text-faint);
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ========================================================== */
+
+.memory-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    min-width:0;
+
+}
+
+/* ========================================================== */
+
+.memory-brand{
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:var(--wine);
+
+}
+
+/* ========================================================== */
+
+.memory-product-title{
+
+    margin:0;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    line-height:1.35;
+
+    letter-spacing:-.02em;
+
+    color:var(--navy);
+
+    cursor:pointer;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+
+}
+
+/* ========================================================== */
+
+.memory-meta{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+/* ========================================================== */
+
+.memory-price{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    color:var(--wine);
+
+}
+
+/* ========================================================== */
+
+.memory-platform{
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:#F4ECE3;
+
+    color:var(--navy);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.05em;
+
+    text-transform:uppercase;
+
+}
+/* ==========================================================
+   Actions
+   Part 3
+========================================================== */
+
+.memory-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:auto;
+
+    flex-wrap:wrap;
+
+}
+
+/* ========================================================== */
+
+.memory-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:
+
+        transform .25s ease,
+
+        background .25s ease,
+
+        color .25s ease,
+
+        border-color .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+/* ========================================================== */
+
+.memory-btn.compare{
+
+    background:var(--wine);
+
+    color:#FFFFFF;
+
+    box-shadow:
+
+        0 10px 20px rgba(159,18,57,.18);
+
+}
+
+.memory-btn.compare:hover{
+
+    background:var(--wine-dark);
+
+    transform:translateY(-2px);
+
+}
+
+/* ========================================================== */
+
+.memory-btn.open{
+
+    background:#FFFFFF;
+
+    color:var(--navy);
+
+    border:1px solid rgba(15,23,42,.08);
+
+}
+
+.memory-btn.open:hover{
+
+    background:#F8F5F1;
+
+    border-color:rgba(159,18,57,.18);
+
+    transform:translateY(-2px);
+
+}
+
+/* ========================================================== */
+
+.memory-btn.remove{
+
+    background:#FFF1F2;
+
+    color:#B91C1C;
+
+    border:1px solid rgba(185,28,28,.10);
+
+}
+
+.memory-btn.remove:hover{
+
+    background:#FEE2E2;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================================
+   Empty State
+========================================================== */
+
+.memory-empty{
+
+    padding:60px 24px;
+
+    text-align:center;
+
+    border:2px dashed rgba(15,23,42,.08);
+
+    border-radius:24px;
+
+    background:#FCFAF7;
+
+}
+
+.memory-empty h4{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:800;
+
+    color:var(--navy);
+
+}
+
+.memory-empty p{
+
+    margin:12px 0 0;
+
+    color:var(--text-lo);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:768px){
+
+    .memory-header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .memory-overview{
+
+        width:100%;
+
+    }
+
+    .memory-stat{
+
+        flex:1;
+
+    }
+
+    .memory-card{
+
+        flex-direction:column;
+
+    }
+
+    .memory-image{
+
+        width:100%;
+
+        height:240px;
+
+    }
+
+    .memory-product-title{
+
+        font-size:20px;
+
+    }
+
+}
+
+/* ========================================================== */
+
+@media (max-width:480px){
+
+    .shopping-memory{
+
+        gap:22px;
+
+    }
+
+    .memory-title{
+
+        font-size:28px;
+
+    }
+
+    .memory-products-header h3{
+
+        font-size:22px;
+
+    }
+
+    .memory-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .memory-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================================
+   Editorial Finish
+========================================================== */
+
+.memory-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.memory-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--wine),
+
+            var(--navy)
+
+        );
+
+    opacity:0;
+
+    transition:opacity .25s ease;
+
+}
+
+.memory-card:hover::before{
+
+    opacity:1;
+
+}

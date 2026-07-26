@@ -1,0 +1,523 @@
+/* =========================================
+   BuyWise Summary – Main Container
+   ========================================= */
+
+.bw-summary {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 42px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  height: 100%;
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+
+.bw-summary-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.bw-summary-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Eyebrow: BUYWISE SUMMARY */
+.bw-summary-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9f1239; /* Wine */
+}
+
+/* Heading: Executive Brief */
+.bw-summary-heading {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0f172a; /* Navy */
+  margin: 0;
+}
+
+/* Small explanation under heading */
+.bw-summary-hero-note {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #64748b; /* Muted grey */
+  max-width: 620px;
+  margin: 0;
+}
+
+/* Right-side badge */
+.bw-summary-hero-right {
+  display: flex;
+  align-items: center;
+}
+
+.bw-summary-ai-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: #334155; /* Slate */
+  padding: 10px 18px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc; /* Light paper */
+  white-space: nowrap;
+}
+
+/* =========================================
+   Overall Assessment Strip (optional)
+   ========================================= */
+
+.bw-summary-overall-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.bw-summary-overall-stat {
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bw-summary-overall-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.bw-summary-overall-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* =========================================
+   Executive Summary
+   ========================================= */
+
+.bw-summary-executive {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1f2937; /* Dark grey */
+  max-width: 820px;
+  margin: 0;
+}
+
+/* =========================================
+   Divider Between Sections
+   ========================================= */
+
+.bw-summary-divider {
+  height: 1px;
+  width: 100%;
+  background: #eef2f7; /* clean light grey */
+  border: none;
+}
+
+/* =========================================
+   Section Layout, Headings & Intro Text
+   ========================================= */
+
+.bw-summary-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bw-summary-section-heading {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9f1239; /* Wine */
+  margin: 0;
+}
+
+/* Section intro sentence under heading */
+.bw-summary-section-intro {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 620px;
+  margin: 0;
+}
+
+/* =========================================
+   Card Grid
+   ========================================= */
+
+.bw-summary-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* =========================================
+   Standard Cards
+   ========================================= */
+
+.bw-summary-card {
+  background: #fcfaf7; /* Soft paper */
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  position: relative;
+}
+
+/* Inner layout: title, description, meta */
+.bw-summary-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Card title */
+.bw-summary-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a; /* Navy */
+  margin: 0;
+}
+
+/* Card description */
+.bw-summary-card-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563; /* Grey */
+  margin: 0;
+}
+
+/* Card hover */
+.bw-summary-card:hover {
+  transform: translateY(-4px);
+  border-color: #9f1239; /* Wine */
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================================
+   Confidence Badge
+   ========================================= */
+
+.bw-summary-card-confidence {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #9f1239;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(159, 18, 57, 0.28);
+  background: rgba(159, 18, 57, 0.06);
+}
+
+/* =========================================
+   Trade-off Cards
+   ========================================= */
+
+.bw-summary-card-tradeoff {
+  background: #fcfaf7; /* Light beige / paper */
+  border-left: 4px solid #9f1239; /* Wine left border */
+  border-radius: 24px;
+  padding-left: 22px; /* adjust for left border */
+}
+
+/* =========================================
+   Hidden Insights – Editorial Notes
+   ========================================= */
+
+.bw-summary-card-editor {
+  background: #ffffff; /* pure white */
+  border: 1px dashed #9f1239; /* wine dashed border */
+}
+
+.bw-summary-editor-label {
+  font-size: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9f1239;
+}
+
+.bw-summary-editor-divider {
+  height: 1px;
+  width: 40px;
+  background: rgba(148, 163, 184, 0.6);
+  margin: 6px 0 10px;
+}
+
+/* =========================================
+   Best For – Pills
+   ========================================= */
+
+.bw-summary-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Pill base */
+.bw-summary-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #fcfaf7;
+  font-size: 14px;
+  color: #334155; /* Slate */
+  cursor: default;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Tiny check icon */
+.bw-summary-pill-check .bw-summary-pill-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1.5px solid #9f1239;
+  display: inline-block;
+  position: relative;
+}
+
+/* Check mark via pseudo-element */
+.bw-summary-pill-check .bw-summary-pill-icon::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 4px;
+  height: 7px;
+  border-right: 1.5px solid #9f1239;
+  border-bottom: 1.5px solid #9f1239;
+  transform: rotate(45deg);
+}
+
+/* Pill text */
+.bw-summary-pill-label {
+  font-weight: 600;
+}
+
+.bw-summary-pill-reason {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Pill hover */
+.bw-summary-pill:hover {
+  background: #9f1239;
+  color: #ffffff;
+  border-color: #9f1239;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(159, 18, 57, 0.15);
+}
+
+.bw-summary-pill:hover .bw-summary-pill-icon {
+  border-color: #ffffff;
+}
+
+.bw-summary-pill:hover .bw-summary-pill-icon::after {
+  border-color: #ffffff;
+}
+
+/* =========================================
+   Maybe Skip If – Softer Cards
+   ========================================= */
+
+.bw-summary-card-soft {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+/* =========================================
+   Bottom Line – Editorial Quote Card
+   ========================================= */
+
+.bw-summary-bottom-line-card {
+  background: #fcfaf7; /* Light beige / paper */
+  border: 1px solid #9f1239; /* Wine */
+  border-radius: 24px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Bottom Line heading text is in JSX; this is the paragraph */
+.bw-summary-bottom-line {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Overall assessment pill – color can be set via modifier classes */
+.bw-summary-bottom-line-strength {
+  font-size: 12px;
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(159, 18, 57, 0.25);
+  background: rgba(159, 18, 57, 0.05);
+  color: #9f1239;
+}
+
+/* Example state modifiers (hook these up to backend) */
+.bw-summary-strength-strong {
+  border-color: rgba(22, 163, 74, 0.4);  /* green-ish */
+  background: rgba(22, 163, 74, 0.08);
+  color: #166534;
+}
+
+.bw-summary-strength-moderate {
+  border-color: rgba(234, 179, 8, 0.5);  /* amber-ish */
+  background: rgba(234, 179, 8, 0.08);
+  color: #92400e;
+}
+
+.bw-summary-strength-weak {
+  border-color: rgba(239, 68, 68, 0.4);  /* red-ish */
+  background: rgba(239, 68, 68, 0.08);
+  color: #b91c1c;
+}
+
+/* =========================================
+   Footer Trust Note
+   ========================================= */
+
+.bw-summary-footer {
+  border-top: 1px solid rgba(226, 232, 240, 0.7);
+  padding-top: 16px;
+}
+
+.bw-summary-footer-text {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(100, 116, 139, 0.9); /* slightly lower opacity */
+  max-width: 650px;
+  margin: 0;
+}
+
+/* =========================================
+   Animations – Staggered Fade Up
+   ========================================= */
+
+@keyframes bw-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base animation helper */
+.bw-summary-animate {
+  animation: bw-fade-up 0.35s ease forwards;
+}
+
+/* Staggered classes – can be used on hero/sections/cards */
+.bw-delay-0 {
+  animation-delay: 0ms;
+}
+
+.bw-delay-1 {
+  animation-delay: 100ms;
+}
+
+.bw-delay-2 {
+  animation-delay: 200ms;
+}
+
+.bw-delay-3 {
+  animation-delay: 300ms;
+}
+
+.bw-delay-4 {
+  animation-delay: 400ms;
+}
+
+.bw-delay-5 {
+  animation-delay: 500ms;
+}
+
+/* Cards can also get fade-up */
+.bw-summary-card-fade-up {
+  animation: bw-fade-up 0.35s ease forwards;
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+
+/* Tablet: slightly tighter padding */
+@media (max-width: 1024px) {
+  .bw-summary {
+    padding: 34px;
+  }
+
+  .bw-summary-overall-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Phone: 1 column, stacked hero */
+@media (max-width: 640px) {
+  .bw-summary {
+    padding: 26px;
+    border-radius: 24px;
+    gap: 40px;
+  }
+
+  .bw-summary-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bw-summary-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bw-summary-hero-right {
+    align-self: flex-start;
+  }
+
+  .bw-summary-heading {
+    font-size: 30px;
+  }
+
+  .bw-summary-overall-strip {
+    grid-template-columns: 1fr;
+  }
+}

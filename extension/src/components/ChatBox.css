@@ -1,0 +1,653 @@
+/* ==========================================================
+   BuyWise Chat
+   Part 1
+========================================================== */
+
+.ask-buywise{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    width:100%;
+
+    padding:28px;
+
+    background:var(--paper);
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    box-shadow:
+        0 18px 40px rgba(15,23,42,.08);
+
+}
+
+/* ========================================================== */
+
+.ask-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/* ========================================================== */
+
+.header-content{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    width:100%;
+
+}
+
+/* ========================================================== */
+
+.ask-badge{
+
+    width:58px;
+
+    height:58px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:var(--navy);
+
+    color:#FFFFFF;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    letter-spacing:.08em;
+
+    box-shadow:
+        0 12px 24px rgba(15,23,42,.16);
+
+}
+
+/* ========================================================== */
+
+.section-label{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:var(--wine);
+
+}
+
+/* ========================================================== */
+
+.ask-header h3{
+
+    margin:0;
+
+    color:var(--navy);
+
+    font-size:30px;
+
+    font-weight:800;
+
+    letter-spacing:-.03em;
+
+}
+
+/* ========================================================== */
+
+.ask-header p{
+
+    margin:8px 0 0;
+
+    color:var(--secondary);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   Quick Questions
+========================================================== */
+
+.quick-actions-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:14px;
+
+}
+
+/* ========================================================== */
+
+.quick-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:64px;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:var(--navy);
+
+    color:#FFFFFF;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.quick-btn:hover{
+
+    background:var(--wine);
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 16px 30px rgba(159,18,57,.20);
+
+}
+
+.quick-btn:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+.btn-text{
+
+    text-align:center;
+
+    line-height:1.5;
+
+}
+/* ==========================================================
+   Chat Area
+   Part 2
+========================================================== */
+
+.chat-messages{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    max-height:420px;
+
+    min-height:260px;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    scroll-behavior:smooth;
+
+    padding-right:8px;
+
+}
+
+/* ========================================================== */
+
+.chat-messages::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.chat-messages::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.chat-messages::-webkit-scrollbar-thumb{
+
+    background:rgba(15,23,42,.12);
+
+    border-radius:999px;
+
+}
+
+/* ========================================================== */
+
+.empty-state{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:180px;
+
+    text-align:center;
+
+    color:var(--secondary);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/* ========================================================== */
+
+.message{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    max-width:72%;
+
+    padding:20px;
+
+    border-radius:22px;
+
+    animation:fadeUp .25s ease;
+
+}
+
+.message.user{
+
+    align-self:flex-end;
+
+    background:var(--wine);
+
+    color:#FFFFFF;
+
+    border-bottom-right-radius:8px;
+
+    box-shadow:
+
+        0 14px 26px rgba(159,18,57,.18);
+
+}
+
+.message.ai{
+
+    align-self:flex-start;
+
+    background:#F3F5F8;
+
+    border:1px solid rgba(15,23,42,.06);
+
+    color:var(--navy);
+
+    border-bottom-left-radius:8px;
+
+}
+
+/* ========================================================== */
+
+.message-label{
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.16em;
+
+    text-transform:uppercase;
+
+    color:var(--wine);
+
+}
+
+.message-content{
+
+    font-size:15px;
+
+    line-height:1.85;
+
+    color:inherit;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+/* ========================================================== */
+
+.thinking-state{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.thinking-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:var(--navy);
+
+    animation:thinkingPulse 1.2s infinite;
+
+}
+
+.thinking-dot:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.thinking-dot:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+.thinking-state small{
+
+    margin-left:6px;
+
+    color:var(--secondary);
+
+    font-size:13px;
+
+}
+/* ==========================================================
+   Input
+========================================================== */
+
+.chat-input-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    width:100%;
+
+}
+
+.chat-input-area input{
+
+    flex:1;
+
+    min-width:0;
+
+    width:100%;
+
+    height:56px;
+
+    padding:0 22px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    background:#FFFFFF;
+
+    color:var(--navy);
+
+    font-family:inherit;
+
+    font-size:15px;
+
+    transition:
+
+        border-color .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+.chat-input-area input::placeholder{
+
+    color:var(--text-faint);
+
+}
+
+.chat-input-area input:focus{
+
+    outline:none;
+
+    border-color:var(--wine);
+
+    box-shadow:
+
+        0 0 0 4px rgba(159,18,57,.08);
+
+}
+
+.send-button{
+
+    flex-shrink:0;
+
+    width:100px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:var(--wine);
+
+    color:#FFFFFF;
+
+    font-family:inherit;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:
+
+        transform .25s ease,
+
+        background .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+.send-button:hover:not(:disabled){
+
+    background:var(--wine-dark);
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        0 16px 30px rgba(159,18,57,.22);
+
+}
+
+.send-button:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+/* ==========================================================
+   Animations
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes thinkingPulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        transform:scale(1.5);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:.35;
+
+    }
+
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:768px){
+
+    .quick-actions-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .chat-messages{
+
+        max-height:340px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .ask-buywise{
+
+        padding:20px;
+
+        border-radius:24px;
+
+    }
+
+    .ask-header{
+
+        align-items:flex-start;
+
+    }
+
+    .ask-header h3{
+
+        font-size:26px;
+
+    }
+
+    .ask-badge{
+
+        width:50px;
+
+        height:50px;
+
+        font-size:18px;
+
+    }
+
+    .chat-input-area{
+
+        flex-direction:column;
+
+    }
+
+    .chat-input-area input,
+
+    .send-button{
+
+        width:100%;
+
+    }
+
+}

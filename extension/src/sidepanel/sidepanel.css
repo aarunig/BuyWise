@@ -1,0 +1,102 @@
+.buywise-app{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:28px;
+
+    padding:28px;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    background:var(--paper);
+
+}
+
+/* ======================================================== */
+
+.buywise-app>*{
+
+    width:100%;
+    flex-shrink:0;
+
+    animation:fadeUp .35s ease;
+
+}
+
+/* ======================================================== */
+
+.buywise-app section{
+
+    width:100%;
+
+}
+
+/* ======================================================== */
+
+.buywise-app::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.buywise-app::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.buywise-app::-webkit-scrollbar-thumb{
+
+    background:#D1D5DB;
+    border-radius:999px;
+
+}
+
+.buywise-app::-webkit-scrollbar-thumb:hover{
+
+    background:#9CA3AF;
+
+}
+
+/* ======================================================== */
+
+.buywise-app>header{
+
+    margin-bottom:4px;
+
+}
+
+.buywise-app>footer{
+
+    margin-top:12px;
+
+}
+
+/* ======================================================== */
+
+@media (max-width:768px){
+
+    .buywise-app{
+
+        padding:22px;
+        gap:22px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .buywise-app{
+
+        padding:18px;
+        gap:18px;
+
+    }
+
+}

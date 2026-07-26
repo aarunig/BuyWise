@@ -1,0 +1,338 @@
+/* ==========================================================
+   BuyWise Search Bar
+   Premium Editorial Redesign
+   ========================================================== */
+
+.search-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:22px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101C2F,
+            #16253D
+        );
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.25);
+
+}
+
+/* ========================= */
+
+.search-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.search-label{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    color:#C77D8B;
+
+}
+
+.search-header h3{
+
+    margin:0;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#F2E8D8;
+
+}
+
+/* ========================= */
+
+.search-filter-btn{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#16253D;
+
+    color:#F2E8D8;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.search-filter-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#7A1F35;
+
+}
+
+.search-filter-btn svg{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+/* ========================= */
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 18px;
+
+    border-radius:20px;
+
+    background:#08111F;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.3s ease;
+
+}
+
+.search-box:hover{
+
+    border-color:#7A1F35;
+
+    box-shadow:0 0 0 4px rgba(122,31,53,.15);
+
+}
+
+.search-box:focus-within{
+
+    border-color:#C77D8B;
+
+    box-shadow:0 0 0 4px rgba(199,125,139,.15);
+
+}
+
+/* ========================= */
+
+.search-icon{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#16253D;
+
+    color:#F2E8D8;
+
+    flex-shrink:0;
+
+}
+
+.search-icon svg{
+
+    width:18px;
+
+    height:18px;
+
+}
+
+/* ========================= */
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.search-box input::placeholder{
+
+    color:#90A0B5;
+
+}
+
+/* ========================= */
+
+.search-ai-btn{
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7A1F35,
+            #A92F53
+        );
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+.search-ai-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(122,31,53,.35);
+
+}
+
+/* ========================= */
+
+.search-suggestions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.suggestion-chip{
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    color:#DCE4ED;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    transition:.25s ease;
+
+    cursor:pointer;
+
+}
+
+.suggestion-chip:hover{
+
+    transform:translateY(-2px);
+
+    background:#7A1F35;
+
+    color:white;
+
+}
+
+/* ========================= */
+
+@media(max-width:768px){
+
+    .search-section{
+
+        padding:18px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .search-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:14px;
+
+    }
+
+    .search-filter-btn{
+
+        align-self:flex-end;
+
+    }
+
+    .search-box{
+
+        padding:12px 14px;
+
+    }
+
+    .search-ai-btn{
+
+        padding:9px 14px;
+
+    }
+
+}
